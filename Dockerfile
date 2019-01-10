@@ -8,6 +8,7 @@ RUN apt-get update \
        python-setuptools \
        python-pip \
        software-properties-common \
+       openjdk-8-jdk-headless \
        openssh-server \
        net-tools systemd systemd-cron sudo \
     && rm -Rf /var/lib/apt/lists/* \
