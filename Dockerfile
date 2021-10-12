@@ -1,4 +1,4 @@
-FROM phusion/baseimage:0.11
+FROM phusion/baseimage:bionic-1.0.0
 ENV pip_packages "pipenv ansible pyopenssl"
 
 # Install dependencies.
@@ -6,7 +6,9 @@ RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        apt-utils \
        python-setuptools \
+       python3-pip \
        python-pip \
+       ca-certificates \
        software-properties-common \
        openjdk-8-jdk-headless \
        openssh-server \
