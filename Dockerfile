@@ -5,7 +5,7 @@ ENV pip_packages "pipenv ansible pyopenssl"
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
        apt-utils \
-       python-setuptools \
+       python3-setuptools \
        python3-pip \
        python-pip \
        ca-certificates \
@@ -18,8 +18,8 @@ RUN apt-get update \
     && apt-get clean
 
 # Install Ansible via Pip.
-RUN pip install -U pip
-RUN pip install $pip_packages
+RUN pip3 install -U pip
+RUN pip3 install $pip_packages
 
 # Install Ansible inventory file.
 RUN mkdir -p /etc/ansible
